@@ -139,8 +139,9 @@ privileges.
 #### Example
 
 ```bash
-pip install socranop
-socranop-installtool post-pip-install --sudo-script ./socranop-sudo.sh
+python3 -m venv --system-site-packages .local/socranop
+.local/socranop/bin/pip install socranop==0.4.92a5
+.local/socranop/bin/socranop-installtool --post-install --sudo-script ./socranop-sudo.sh
 # Inspect ./socranop-sudo.sh to make sure it's safe to run as root
 sudo ./socranop-sudo.sh
 rm ./socranop-sudo.sh
